@@ -23,7 +23,7 @@ public class LeituraExcel {
     public Set<String> empresa, grupo, ic, incidente, criado, resolvido, problema, resolucao, prioridade, sumario;
 
     public LeituraExcel() {
-        VerifiedFiles verifique = new VerifiedFiles("C:\\Users\\iome9\\Documents\\NetBeansProjects\\PainelIncidente\\src\\painelincidente\\files");        
+        VerifiedFiles verifique = new VerifiedFiles("C:\\Users\\iome9\\Documents\\NetBeansProjects\\PainelIncidentes\\src\\painelincidente\\files");        
         this.url = verifique.fileString();
         this.count = 0;
         this.rows = 0;

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/iome9/Downloads/Compressed/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iome9/Downloads/Compressed/poi-3.10.1-20140818.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iome9/Downloads/Compressed/poi-ooxml-3.10.1-20140818.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iome9/Downloads/Compressed/poi-ooxml-schemas-3.10.1-20140818.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iome9/Downloads/Compressed/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iome9/Downloads/Compressed/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
