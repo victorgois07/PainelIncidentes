@@ -1,6 +1,7 @@
 package equate;
 
 import dao.SelectDB;
+import incidente.ObjectIncidente;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -29,7 +30,51 @@ public class CompararFileExcelDB {
         
         arquivoInc.removeAll(dbInc);
         
-        return arquivoInc;       
+        return arquivoInc;
+        
+    }
+    
+    public List<List<String>> listDataDiff(){
+        
+        List<List<String>> dataFile = this.getExcel().dadosArray();
+        
+        List<String> dataDiff = this.diffIncidenteFileDB();
+        
+        List<List<String>> dataFinal = new ArrayList<>();
+        
+        int count=0;
+        
+        dataFile.remove(0);
+        
+        for(List df:dataFile){
+            for(String diff:dataDiff){
+                if(df.indexOf(diff) == 0){
+                    
+                    dataFinal.add(new ArrayList<>());
+                    
+                    ObjectIncidente objInc = new ObjectIncidente();
+                    
+                    objInc.setIncidente(df.get(0).toString());
+                    objInc.setSumario(df.get(1).toString());
+                    objInc.setCriado(df.get(2).toString());
+                    objInc.setPrioridade(df.get(3).toString());
+                    objInc.setResolvido(df.get(4).toString());
+                    objInc.setIc(df.get(5).toString());
+                    objInc.setGrupo(df.get(6).toString());
+                    objInc.setEmpresa(df.get(7).toString());
+                    objInc.setProblema(df.get(8).toString());
+                    objInc.setResolucao(df.get(9).toString());
+                    
+                    dataFinal.get(count).addAll(objInc.listDado());
+                    
+                    count++;
+                }
+            }
+            
+        }
+        
+        
+        return dataFinal;
         
     }
 

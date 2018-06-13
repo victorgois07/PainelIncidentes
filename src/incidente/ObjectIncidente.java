@@ -1,10 +1,30 @@
 package incidente;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ObjectIncidente {
     public String empresa, grupo, ic, incidente, criado, resolvido, problema, resolucao, prioridade, sumario;
 
     public ObjectIncidente() {
         
+    }
+    
+    public List<String> listDado(){
+        List<String> dado = new ArrayList<>();
+        
+        dado.add(this.getIncidente());
+        dado.add(this.getEmpresa());
+        dado.add(this.getGrupo());
+        dado.add(this.getIc());
+        dado.add(this.getCriado());
+        dado.add(this.getResolvido());
+        dado.add(this.getProblema());
+        dado.add(this.getResolucao());
+        dado.add(this.getPrioridade());
+        dado.add(this.getSumario());
+        
+        return dado;
     }
 
     public String getEmpresa() {
