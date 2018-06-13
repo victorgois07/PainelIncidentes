@@ -30,8 +30,6 @@ public class SelectDB {
                 
                 ResultSet resultadoSentenca = sentenca.executeQuery();
                 
-                
-                
                 while(resultadoSentenca.next()){
                     resultData.add(resultadoSentenca.getString(col));
                 }
@@ -42,6 +40,33 @@ public class SelectDB {
             }
             
             return resultData;
+            
+        } catch (SQLException ex) {
+            
+            throw new RuntimeException(ex);
+        }
+    }
+    
+    public int returnID(String sql, String col){
+        int id = 0;
+        
+        try {
+            if (this.conexao.conectar()) {
+                
+                PreparedStatement sentenca = this.conexao.getConexao().prepareStatement(sql);
+                
+                ResultSet resultadoSentenca = sentenca.executeQuery();
+                
+                while(resultadoSentenca.next()){
+                    id = resultadoSentenca.getInt(col);
+                }
+                
+                sentenca.close();
+                this.conexao.getConexao().close();
+                
+            }
+            
+            return id;
             
         } catch (SQLException ex) {
             

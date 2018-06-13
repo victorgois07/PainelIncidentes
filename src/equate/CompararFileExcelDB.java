@@ -56,14 +56,14 @@ public class CompararFileExcelDB {
                     
                     objInc.setIncidente(df.get(0).toString());
                     objInc.setSumario(df.get(1).toString());
-                    objInc.setCriado(df.get(2).toString());
-                    objInc.setPrioridade(df.get(3).toString());
-                    objInc.setResolvido(df.get(4).toString());
-                    objInc.setIc(df.get(5).toString());
-                    objInc.setGrupo(df.get(6).toString());
-                    objInc.setEmpresa(df.get(7).toString());
-                    objInc.setProblema(df.get(8).toString());
-                    objInc.setResolucao(df.get(9).toString());
+                    objInc.setCriado(df.get(3).toString());
+                    objInc.setPrioridade(df.get(4).toString());
+                    objInc.setResolvido(df.get(5).toString());
+                    objInc.setIc(df.get(6).toString());
+                    objInc.setEmpresa(df.get(8).toString());
+                    objInc.setGrupo(df.get(7).toString());
+                    objInc.setProblema(df.get(10).toString());
+                    objInc.setResolucao(df.get(12).toString());
                     
                     dataFinal.get(count).addAll(objInc.listDado());
                     
