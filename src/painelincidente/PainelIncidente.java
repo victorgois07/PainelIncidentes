@@ -1,8 +1,6 @@
 package painelincidente;
 
 import FX.Painel;
-import dao.ExecutaDB;
-import dao.TableDB;
 
 public class PainelIncidente {
 
@@ -11,7 +9,6 @@ public class PainelIncidente {
         Painel p = new Painel();
         
         p.show();
-        
        
     }
     
